@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang='en'>
+  
+  <!--            Heading Section            -->
+
+  <head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link src="calender.css" type="stylesheet">
+    <title>TSA Website | Calendar</title>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'listMonth',
+
+          // button name customization
+          views: {
+            listDay: { buttonText: 'Day' },
+            listWeek: { buttonText: 'Week' },
+            listMonth: { buttonText: 'Month' },
+            listYear: { buttonText: 'Year' }
+          },
+
+          headerToolbar: {
+            left: 'prev,next',
+            center: 'title',
+            right: 'listDay,listWeek,listMonth,listYear'
+          },
+          
+          // Add Events to be listed on the Calender.
+          // Date Times are in 24 hour format
+
+          // Event Format:
+          // {
+          // title: '',
+          // start: '',
+          // end: ''
+          // }
+          events: [
+            {
+              title: 'TSA Project Night @ iLEAD',
+              start: '2023-01-27T14:00:00',
+              end: '2023-01-27T19:00:00'
+            },
+            {
+              title: 'State Conference Chapter Registration Due',
+              start: '2023-02-03'
+            },
+            {
+              title: 'TSA Club Meeting',
+              start: '2023-02-06T11:30:00',
+              end: '2023-02-06T12:00:00'
+            },
+            {
+              title: 'TSA Project Night @ iLEAD',
+              start: '2023-02-10T14:00:00',
+              end: '2023-02-10T19:00:00'
+            },
+            {
+              title: 'TSA Club Meeting',
+              start: '2023-03-09T11:30:00',
+              end: '2023-03-09T12:00:00'
+            },
+            {
+              title: 'State Hotel Reservations Due',
+              start: '2023-03-13'
+            },
+            {
+              title: 'State Conference Registration Closes',
+              start: '2023-03-13'
+            },
+            {
+              title: 'State Conference Late Registration Closes',
+              start: '2023-03-20'
+            },
+            {
+              title: 'State Conference Online Submission Deadline',
+              start: '2023-03-27'
+            },
+            {
+              title: 'KYTSA State Conference (Marriott Downtown Louisville)',
+              start: '2023-04-10',
+              end: '2023-04-12'
+            },
+            {
+              title: 'TSA Club Meeting',
+              start: '2023-04-20T11:30:00',
+              end: '2023-04-20T12:00:00'
+            },
+            {
+              title: 'TSA National Conference (Louisville, KY)',
+              start: '2023-06-28',
+              end: '2023-07-02'
+            },
+            {
+              title: 'TSA Club Meeting',
+              start: '2023-08-24T11:30:00',
+              end: '2023-08-24T12:00:00'
+            },
+            {
+              title: 'TSA Club Meeting',
+              start: '2023-09-21T11:30:00',
+              end: '2023-09-21T12:00:00'
+            },
+            {
+              title: 'TSA Club Meeting',
+              start: '2023-10-19T11:30:00',
+              end: '2023-10-19T12:00:00'
+            },
+            {
+              title: 'TSA Club Meeting',
+              start: '2023-11-16T11:30:00',
+              end: '2023-11-16T12:00:00'
+            },
+            {
+              title: 'KYTSA State Conference (Marriott Downtown Louisville)',
+              start: '2024-03-18T09:00:00',
+              end: '2024-03-20T15:00:00'
+            },
+            {
+              title: 'TSA Club Meeting',
+              start: '2024-04-08T11:30:00',
+              end: '2024-04-08T12:00:00'
+            },
+            { 
+              title: 'TSA Officer Elections',
+              start: '2024-04-08T11:30:00',
+              end: '2024-04-08T12:00:00'
+            }
+          ],
+        });
+
+        calendar.render();
+      });
+
+    </script>
+  </head>
+  <body>
+    <div id='calendar'></div>
+  </body>
+</html>
